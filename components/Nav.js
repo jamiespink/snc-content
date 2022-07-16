@@ -23,15 +23,19 @@ export default function Nav() {
             <div className={styles.logo} />
             <div className={styles.linksDesktop}>{renderLinks()}</div>
 
-            {/* <button
-              className="burger"
+            <button
+              className={styles.burger}
               onClick={() => setOpen(!open)}
               aria-label="Toggle Menu"
               type="button"
             />
-            <div className="links-mobile">
-              <Container>{renderLinks()}</Container>
-            </div> */}
+            <div className={`${styles.linksMobile} ${open ? styles.open : ""}`}>
+              <Container>
+                <div className={styles.linksMobileContainer}>
+                  {renderLinks()}
+                </div>
+              </Container>
+            </div>
           </div>
         </Container>
       </nav>
