@@ -1,0 +1,33 @@
+.nav {
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  display: flex;
+  background: rgb(115, 161, 199);
+  height: 80px;
+}
+.innerContainer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 100%;
+}
+.logo {
+  width: 120px;
+  height: 40px;
+  background: #b5d0e0;
+}
+.linksDesktop {
+  display: none;
+}
+@media (min-width: 992px) {
+  .linksDesktop {
+    display: block;
+  }
+  /*
+  .burger,
+  .links-mobile {
+    display: none;
+  } */
+}
