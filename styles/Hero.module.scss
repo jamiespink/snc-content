@@ -1,0 +1,55 @@
+@import "./variables.scss";
+
+.outerContainer {
+  padding-top: 1.5rem;
+  overflow: hidden;
+  p {
+    margin: 0;
+    font-size: 1.3rem;
+  }
+  h1 {
+    margin: 0;
+    font-size: 1.3rem;
+  }
+  h2 {
+    font-size: 3rem;
+    text-transform: uppercase;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+  }
+}
+.content {
+  margin-bottom: 0.75rem;
+}
+.image {
+  height: 250px;
+  background: $colour3;
+}
+@media (min-width: $md) {
+  .outerContainer {
+    padding: 0;
+    h2 {
+      font-size: 5rem;
+    }
+  }
+  .innerContainer {
+    display: flex;
+    align-items: stretch;
+    min-height: 400px;
+  }
+  .content,
+  .image {
+    width: 50%;
+  }
+  .content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 2rem 0;
+    padding-right: 1rem;
+    box-sizing: border-box;
+  }
+  .image {
+    height: auto;
+  }
+}

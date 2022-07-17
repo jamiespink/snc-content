@@ -1,3 +1,5 @@
+@import "./variables.scss";
+
 .container {
   width: 100%;
   padding-left: 0.75rem;
@@ -6,22 +8,22 @@
   margin-right: auto;
   box-sizing: border-box;
 }
-@media (min-width: 540px) {
+@media (min-width: $xs) {
   .container {
-    max-width: 540px;
+    max-width: $xs;
   }
 }
-@media (min-width: 768px) {
+@media (min-width: $sm) {
   .container {
     max-width: 720px;
   }
 }
-@media (min-width: 992px) {
+@media (min-width: $md) {
   .container {
     max-width: 960px;
   }
 }
-@media (min-width: 1200px) {
+@media (min-width: $lg) {
   .container {
     max-width: 1140px;
   }
@@ -29,7 +31,7 @@
     max-width: 960px;
   }
 }
-@media (min-width: 1400px) {
+@media (min-width: $xl) {
   .container {
     max-width: 1320px;
   }

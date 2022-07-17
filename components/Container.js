@@ -1,4 +1,4 @@
-import styles from "../styles/Container.module.css"
+import styles from "../styles/Container.module.scss"
 
 export default function Container({ narrow = false, children }) {
   return (
