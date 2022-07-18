@@ -1,0 +1,52 @@
+@import "./variables.scss";
+
+.container {
+  margin-bottom: 1rem;
+  background-color: $colour2;
+  &:nth-child(odd) {
+    flex-flow: row-reverse;
+  }
+}
+.image {
+  height: 150px;
+  background-color: $colour3;
+}
+.textContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 150px;
+}
+.textWrap {
+  text-align: center;
+  h3 {
+    text-transform: uppercase;
+  }
+}
+@media (min-width: $xs) {
+  .container {
+    display: flex;
+  }
+  .image {
+    width: 50%;
+  }
+  .textContainer {
+    width: 50%;
+  }
+}
+@media (min-width: $md) {
+  .container {
+    &:nth-child(odd) {
+      margin-right: 33.333%;
+    }
+    &:nth-child(even) {
+      margin-left: 33.333%;
+    }
+  }
+  .image {
+    height: 200px;
+  }
+  .textContainer {
+    height: 200px;
+  }
+}
