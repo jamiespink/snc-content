@@ -7,7 +7,7 @@ export default function CategoriesList({ categories }) {
     <section className={styles.outerContainer}>
       <Container>
         {categories.map((category) => (
-          <CategoriesListItem key={category} category={category} />
+          <CategoriesListItem key={category.id} category={category} />
         ))}
       </Container>
     </section>

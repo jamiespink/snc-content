@@ -8,6 +8,7 @@
   display: flex;
   background: $colour4;
   height: $navbar-height;
+  z-index: 1;
 }
 .innerContainer {
   display: flex;
