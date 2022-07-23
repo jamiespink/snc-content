@@ -12,7 +12,7 @@ export default function PostsListItem({ post }) {
         <div
           className={styles.excerpt}
           dangerouslySetInnerHTML={{ __html: post.excerpt.rendered }}
-        ></div>
+        />
       </div>
     </Link>
   );

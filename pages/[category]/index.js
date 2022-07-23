@@ -1,8 +1,8 @@
 import Head from "next/head";
-import Layout from "../components/Layout";
-import CategoryHeader from "../components/CategoryHeader";
-import PostsList from "../components/PostsList";
-import { getPostsByCategory, getCategories } from "../lib/api";
+import Layout from "../../components/Layout";
+import CategoryHeader from "../../components/CategoryHeader";
+import PostsList from "../../components/PostsList";
+import { getPostsByCategory, getCategories } from "../../lib/api";
 
 export default function Category({ category, posts }) {
   return (
