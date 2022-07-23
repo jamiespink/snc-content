@@ -7,14 +7,16 @@ export default function PostHeader({ post }) {
     <section className={styles.outerContainer}>
       <Container>
         <h1>{post.title.rendered}</h1>
-        <div className={styles.image}>
-          <Image
-            src={post._embedded['wp:featuredmedia'][0].source_url}
-            layout="fill"
-            objectFit="cover"
-            alt={post.title.rendered}
-          />
-        </div>
+        {post._embedded["wp:featuredmedia"] && (
+          <div className={styles.image}>
+            <Image
+              src={post._embedded["wp:featuredmedia"][0].source_url}
+              layout="fill"
+              objectFit="cover"
+              alt={post.title.rendered}
+            />
+          </div>
+        )}
       </Container>
     </section>
   );
