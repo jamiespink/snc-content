@@ -3,7 +3,7 @@ const nextConfig = {
   reactStrictMode: true,
   swcMinify: true,
   images: {
-    domains: ['localhost', 'https://snc-content.headless-wordpress.com'],
+    domains: ['localhost', 'snc-content.headless-wordpress.com'],
   },
 }
 
