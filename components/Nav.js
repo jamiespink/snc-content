@@ -1,5 +1,6 @@
 import { useState } from "react";
 import styles from "../styles/Nav.module.scss";
+import Link from "next/link";
 import Container from "./Container";
 
 export default function Nav() {
@@ -20,7 +21,11 @@ export default function Nav() {
       <nav className={`${styles.nav} nav`}>
         <Container>
           <div className={styles.innerContainer}>
-            <div className={styles.logo} />
+            <Link href="/">
+              <a>
+                <div className={styles.logo} />
+              </a>
+            </Link>
             <div className={styles.linksDesktop}>{renderLinks()}</div>
 
             <button

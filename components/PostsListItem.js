@@ -7,13 +7,15 @@ export default function PostsListItem({ post }) {
 
   return (
     <Link href={`${router.asPath}/${post.slug}`}>
-      <div className={styles.container}>
-        <h2>{post.title.rendered}</h2>
-        <div
-          className={styles.excerpt}
-          dangerouslySetInnerHTML={{ __html: post.excerpt.rendered }}
-        />
-      </div>
+      <a>
+        <div className={styles.container}>
+          <h2>{post.title.rendered}</h2>
+          <div
+            className={styles.excerpt}
+            dangerouslySetInnerHTML={{ __html: post.excerpt.rendered }}
+          />
+        </div>
+      </a>
     </Link>
   );
 }
