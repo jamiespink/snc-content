@@ -1,0 +1,13 @@
+@import "./variables.scss";
+
+.outerContainer {
+  padding-top: 1.5rem;
+  overflow: hidden;
+}
+.image {
+  position: relative;
+  height: 200px;
+}
+@media (min-width: $md) {
+    
+}

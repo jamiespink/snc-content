@@ -3,7 +3,7 @@ import CategoriesListItem from "./CategoriesListItem";
 import styles from "../styles/CategoriesList.module.scss";
 
 export default function CategoriesList({ categories }) {
-  return (
+  return categories.length ? (
     <section className={styles.outerContainer}>
       <Container>
         {categories.map((category) => (
@@ -11,5 +11,5 @@ export default function CategoriesList({ categories }) {
         ))}
       </Container>
     </section>
-  );
+  ) : null;
 }
