@@ -5,12 +5,6 @@ import styles from "../styles/PostsListItem.module.scss";
 export default function PostsListItem({ post }) {
   const router = useRouter();
 
-  function getHref() {
-    return post.acf.external_url.length
-      ? post.acf.external_url
-      : `${router.asPath}/${post.slug}`;
-  }
-
   function externalPost() {
     return post.acf.external_url !== "";
   }
