@@ -1,19 +1,20 @@
 import Head from "next/head";
+import { getPlaiceholder } from "plaiceholder";
 import Layout from "../../components/Layout";
 import CategoryHeader from "../../components/CategoryHeader";
 import PostsList from "../../components/PostsList";
 import { getPostsByCategory, getCategories } from "../../lib/api";
 
-export default function Category({ category, posts }) {
+export default function Category({ categoryWithBase64, posts }) {
   return (
     <Layout>
-      <CategoryHeader category={category} />
+      <CategoryHeader category={categoryWithBase64} />
       <PostsList posts={posts} />
     </Layout>
   );
 }
 
-export async function getServerSideProps({ params }) {
+export async function getStaticProps({ params }) {
   // todo: commit to store and only fetch category when its not set
   const categories = await getCategories();
   let category;
@@ -23,13 +24,35 @@ export async function getServerSideProps({ params }) {
       break;
     }
   }
+  const { base64, img } = await getPlaiceholder(category.acf.image);
+  const categoryWithBase64 = {
+    ...category,
+    plaiceholder: {
+      ...img,
+      blurDataURL: base64,
+    },
+  };
+
   const posts = await getPostsByCategory(params.category);
   if (posts.length) {
     return {
-      props: { category, posts },
+      props: { categoryWithBase64, posts },
     };
   }
   return {
     notFound: true,
   };
+}
+
+export async function getStaticPaths() {
+  const categories = await getCategories();
+  const paths = categories.map((category) => {
+    const slug = category.slug
+    return {
+      params: {
+        category: slug
+      }
+    }
+  });
+  return { paths, fallback: false };
 }

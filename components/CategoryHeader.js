@@ -3,6 +3,8 @@ import Image from "next/image";
 import styles from "../styles/CategoryHeader.module.scss";
 
 export default function CategoryHeader({ category }) {
+  const imageProps = category.plaiceholder;
+  
   return (
     <section className={styles.outerContainer}>
       <Container>
@@ -12,7 +14,8 @@ export default function CategoryHeader({ category }) {
         </div>
         <div className={styles.image}>
           <Image
-            src={category.acf.image}
+            {...imageProps}
+            placeholder="blur"
             layout="fill"
             objectFit="cover"
             alt={category.name}
