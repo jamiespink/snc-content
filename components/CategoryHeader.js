@@ -4,22 +4,24 @@ import styles from "../styles/CategoryHeader.module.scss";
 
 export default function CategoryHeader({ category }) {
   const imageProps = category.plaiceholder;
-  
+
   return (
     <section className={styles.outerContainer}>
-      <Container>
-        <div className={styles.text}>
-          <h1>{category.name}</h1>
-          <p>{category.description}</p>
-        </div>
-        <div className={styles.image}>
-          <Image
-            {...imageProps}
-            placeholder="blur"
-            layout="fill"
-            objectFit="cover"
-            alt={category.name}
-          />
+      <Container narrow>
+        <div className={styles.innerContainer}>
+          <div className={styles.text}>
+            <h1>{category.name}</h1>
+            <p>{category.description}</p>
+          </div>
+          {/* <div className={styles.image}>
+            <Image
+              {...imageProps}
+              placeholder="blur"
+              layout="fill"
+              objectFit="cover"
+              alt={category.name}
+            />
+          </div> */}
         </div>
       </Container>
     </section>
