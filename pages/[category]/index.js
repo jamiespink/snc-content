@@ -33,7 +33,27 @@ export async function getStaticProps({ params }) {
     },
   };
 
-  const posts = await getPostsByCategory(params.category);
+  let posts = await getPostsByCategory(params.category);
+  posts = await Promise.all(
+    posts.map(async (post) => {
+      try {
+        console.log(post._embedded);
+        const { base64, img } = await getPlaiceholder(
+          post._embedded["wp:featuredmedia"][0].source_url
+        );
+        return {
+          ...post,
+          plaiceholder: {
+            ...img,
+            blurDataURL: base64,
+          },
+        };
+      } catch (err) {
+        console.log(err);
+        return post;
+      }
+    })
+  );
   if (posts.length) {
     return {
       props: { categoryWithBase64, posts },
@@ -47,12 +67,12 @@ export async function getStaticProps({ params }) {
 export async function getStaticPaths() {
   const categories = await getCategories();
   const paths = categories.map((category) => {
-    const slug = category.slug
+    const slug = category.slug;
     return {
       params: {
-        category: slug
-      }
-    }
+        category: slug,
+      },
+    };
   });
   return { paths, fallback: false };
 }
