@@ -17,12 +17,11 @@ export default function PostsListItem({ post }) {
         externalPost() ? post.acf.external_url : `${router.asPath}/${post.slug}`
       }
     >
-      <a target={externalPost() ? "_blank" : ""}>
-        <div className={styles.container}>
-          <div className={styles.text}>
-            <h2>{post.title.rendered}</h2>
-            <p>{post.acf.description}</p>
-          </div>
+      <a
+        target={externalPost() ? "_blank" : ""}
+        className={styles.outerContainer}
+      >
+        <div className={styles.innerContainer}>
           {imageProps && (
             <div className={styles.image}>
               <Image
@@ -34,6 +33,10 @@ export default function PostsListItem({ post }) {
               />
             </div>
           )}
+          <div className={styles.text}>
+            <h2>{post.title.rendered}</h2>
+            <p>{post.acf.description}</p>
+          </div>
         </div>
       </a>
     </Link>

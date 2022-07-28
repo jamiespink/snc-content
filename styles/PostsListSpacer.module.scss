@@ -1,16 +1,12 @@
 @import "./variables.scss";
 
-.image {
-  position: relative;
-  height: 200px;
-}
 @media (min-width: $sm) {
-  .outerContainer {
+  .container {
     flex: 0 0 48%;
   }
 }
 @media (min-width: $md) {
-  .outerContainer {
+  .container {
     flex: 0 0 31%;
   }
 }
