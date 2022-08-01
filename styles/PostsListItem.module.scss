@@ -1,5 +1,8 @@
 @import "./variables.scss";
 
+.outerContainer {
+  background-color: $colour2;
+}
 .innerContainer {
   overflow: hidden;
 }
@@ -8,11 +11,16 @@
   height: 200px;
   transition: all 300ms;
 }
+.text {
+  padding: 0.5rem;
+  p {
+    margin-bottom: 0;
+  }
+}
 .hover {
   .image {
     margin-left: -10px;
     margin-right: -10px;
-    // transform: scale(1.5);
   }
 }
 @media (min-width: $sm) {
