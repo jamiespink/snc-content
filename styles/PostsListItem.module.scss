@@ -1,8 +1,19 @@
 @import "./variables.scss";
 
+.innerContainer {
+  overflow: hidden;
+}
 .image {
   position: relative;
   height: 200px;
+  transition: all 300ms;
+}
+.hover {
+  .image {
+    margin-left: -10px;
+    margin-right: -10px;
+    // transform: scale(1.5);
+  }
 }
 @media (min-width: $sm) {
   .outerContainer {
