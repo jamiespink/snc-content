@@ -3,11 +3,13 @@ import styles from "../styles/About.module.scss";
 
 export default function About({ content }) {
   return (
-    <section className={styles.outerContainer}>
-      <Container narrow>
-        <h2>About</h2>
-        <p>{content}</p>
-      </Container>
-    </section>
+    <div id="about" className="scrollAnchor">
+      <section className={styles.outerContainer}>
+        <Container narrow>
+          <h2>About</h2>
+          <p>{content}</p>
+        </Container>
+      </section>
+    </div>
   );
 }

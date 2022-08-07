@@ -7,11 +7,22 @@ export default function Nav() {
   const [open, setOpen] = useState(false);
 
   function renderLinks() {
+    function onClick(e) {
+      e.preventDefault;
+      setOpen(false);
+    }
+
     return (
       <>
-        <a>Services</a>
-        <a>Work</a>
-        <a>Contact</a>
+        <Link href="/#about">
+          <a onClick={onClick}>About</a>
+        </Link>
+        <Link href="/#services">
+          <a onClick={onClick}>Services</a>
+        </Link>
+        <Link href="#footer">
+          <a onClick={onClick}>Contact</a>
+        </Link>
       </>
     );
   }
