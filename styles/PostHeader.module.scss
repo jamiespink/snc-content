@@ -1,8 +1,12 @@
 .outerContainer {
   padding-top: 1.5rem;
+  padding-bottom: 1.5rem;
   overflow: hidden;
 }
 .image {
     position: relative;
-    height: 200px;
+    min-height: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
