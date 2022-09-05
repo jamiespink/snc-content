@@ -1,5 +1,6 @@
 import { useRouter } from "next/router";
 import { useState } from "react";
+import { decode } from 'html-entities';
 import Link from "next/link";
 import Image from "next/image";
 import styles from "../styles/PostsListItem.module.scss";
@@ -39,7 +40,7 @@ export default function PostsListItem({ post }) {
             </div>
           )}
           <div className={styles.text}>
-            <h2>{post.title.rendered}</h2>
+            <h2>{decode(post.title.rendered)}</h2>
             <p>{post.acf.description}</p>
           </div>
         </div>

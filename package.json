@@ -10,6 +10,7 @@
   },
   "dependencies": {
     "axios": "^0.27.2",
+    "html-entities": "^2.3.3",
     "next": "12.2.2",
     "normalize.css": "^8.0.1",
     "plaiceholder": "^2.4.0",
