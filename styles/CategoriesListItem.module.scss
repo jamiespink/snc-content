@@ -3,7 +3,7 @@
 .container {
   margin-bottom: 1rem;
   background-color: $colour2;
-  &:nth-child(odd) {
+  &:nth-child(even) {
     flex-flow: row-reverse;
   }
 }
