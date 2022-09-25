@@ -6,7 +6,7 @@
   left: 0px;
   width: 100%;
   display: flex;
-  background: $colour4;
+  background: $colour3;
   height: $navbar-height;
   z-index: 1;
 }
@@ -19,7 +19,7 @@
 .logo {
   width: 120px;
   height: 40px;
-  background: $colour3;
+  background: $colour2;
   cursor: pointer;
 }
 .linksMobile {
@@ -41,6 +41,7 @@
 }
 .linksDesktop {
   display: none;
+  color: $colour2;
 }
 .burger {
   width: 40px;

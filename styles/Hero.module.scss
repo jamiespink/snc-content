@@ -3,19 +3,23 @@
 .outerContainer {
   padding-top: 1.5rem;
   overflow: hidden;
+  background-color: $colour4;
   p {
     margin: 0;
     font-size: 1.3rem;
+    color: $colour6;
   }
   h1 {
     margin: 0;
     font-size: 1.3rem;
+    color: $colour2;
   }
   h2 {
     font-size: 3rem;
     text-transform: uppercase;
     margin-top: 1rem;
     margin-bottom: 1rem;
+    color: $colour6;
   }
 }
 .content {
@@ -23,7 +27,7 @@
 }
 .image {
   height: 250px;
-  background: $colour3;
+  position: relative;
 }
 @media (min-width: $md) {
   .outerContainer {

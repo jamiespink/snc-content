@@ -1,9 +1,10 @@
 import Link from "next/link";
+import styles from "../styles/Button.module.scss";
 
 export default function Button({ text, link }) {
   return (
     <Link href={link}>
-      <a>{text}</a>
+      <a className={styles.anchor}>{text}</a>
     </Link>
   );
 }

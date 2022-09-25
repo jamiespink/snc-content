@@ -1,7 +1,13 @@
 @import "./variables.scss";
 
 .outerContainer {
-  background: $colour2;
+  background: $colour4;
   padding: 4rem 0px;
   text-align: center;
+  h2 {
+    color: $colour6;
+  }
+  a {
+    color: $colour2;
+  }
 }

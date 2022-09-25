@@ -18,8 +18,8 @@ export default function CategoriesListItem({ category }) {
       </div>
       <div className={styles.textContainer}>
         <div className={styles.textWrap}>
-          <h3>{category.name}</h3>
-          <Button link={category.slug} text="View" />
+          {/* <h3>{category.name}</h3> */}
+          <Button link={category.slug} text={category.name} />
         </div>
       </div>
     </div>

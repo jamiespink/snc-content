@@ -1,7 +1,8 @@
 import Container from "./Container";
+import Image from "next/image";
 import styles from "../styles/Hero.module.scss";
 
-export default function Hero() {
+export default function Hero({ image }) {
   return (
     <section className={styles.outerContainer}>
       <Container>
@@ -11,7 +12,15 @@ export default function Hero() {
             <h2>Sarah Chetcuti</h2>
             <h1>Content Writer based in Malta</h1>
           </div>
-          <div className={styles.image} />
+          <div className={styles.image}>
+            <Image
+              {...image}
+              placeholder="blur"
+              layout="fill"
+              objectFit="contain"
+              alt="Hero"
+            />
+          </div>
         </div>
       </Container>
     </section>

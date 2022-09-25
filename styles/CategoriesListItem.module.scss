@@ -2,7 +2,7 @@
 
 .container {
   margin-bottom: 1rem;
-  background-color: $colour2;
+  background-color: $colour4;
   &:nth-child(even) {
     flex-flow: row-reverse;
   }
@@ -20,9 +20,9 @@
 }
 .textWrap {
   text-align: center;
-  h3 {
-    text-transform: uppercase;
-  }
+  // h3 {
+  //   text-transform: uppercase;
+  // }
 }
 @media (min-width: $xs) {
   .container {

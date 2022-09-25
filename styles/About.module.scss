@@ -1,10 +1,14 @@
 @import "./variables.scss";
 
 .outerContainer {
-  background: $colour2;
+  background: $colour6;
   padding: 4rem 0px;
   text-align: center;
+  h2 {
+    color: $colour1;
+  }
   p {
+    color: $colour2;
     margin: 0;
   }
 }
